@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+:root {
+  /* Color styles */
+  --colors-primary--disabled: #ceecfc;
+  --colors-primary: #01a7fd;
+  --colors-primary--hover: #0f79af;
+  --colors-primary--active: #59c79f;
+  --colors-white-s: #ffffff;
+  --colors-white: #ffffff;
+  --colors-gray-m: #fafafa;
+  --colors-gray-l: #f1f1f1;
+  --colors-gras-s: #d4d4d4;
+  --colors-gray: #111111;
+  --colors-gray-k: #6b6b6b;
+  --colors-black: #111111;
+  --colors-red--girl: #f9e3e3;
+  --colors-red: #db524e;
+  --colors-super--red: #c7302b;
+  --colors-green: #27ae60;
+  --colors-blue: #428bf9;
+  --colors-red--boy: #f2caca;
+  --colors-star: #ffd912;
+
+  /* Text-size styles */
+  --heading-1: 56px;
+  --heading-2: 48px;
+  --heading-3: 40px;
+  --heading-4: 32px;
+  --heading-5: 24px;
+  --heading-6: 20px;
+  --paragraph-1: 20px;
+  --paragraph-2: 14px;
+  --paragraph-2-medium: 16px;
+  --paragraph-3: 13px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+  color: var(--colors-black);
+  font-size: var(--paragraph-2-medium);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
