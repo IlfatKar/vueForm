@@ -7,7 +7,7 @@ const props = defineProps<{
 }>()
 </script>
 <template>
-  <button :class="{secondary: props.type === 'secondary'}" :on-click="props.onClick">
+  <button :class="{secondary: props.type === 'secondary'}" @click="props.onClick">
     <slot name="icon"></slot>
     <slot></slot>
   </button>

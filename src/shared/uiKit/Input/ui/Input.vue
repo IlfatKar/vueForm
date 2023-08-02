@@ -27,7 +27,7 @@ const isNumber = (e: KeyboardEvent) => {
 
 <template>
   <div class="input-wrapper">
-    <label :class="{ error: error?.length, active: modelValue || isActive }">
+    <label :class="{ error: error?.length > 0, active: modelValue || isActive }">
       <span class="placeholder">{{ props.placeholder }}</span>
       <input
         :type="props.type"
@@ -58,6 +58,7 @@ label {
   width: 100%;
   flex-direction: column-reverse;
   height: 56px;
+  transition: all .25s ;
 }
 
 label:hover {
@@ -67,8 +68,8 @@ label:hover {
     0px 4px 4px 0px rgba(51, 51, 51, 0.04);
 }
 
-label.error {
-  background: var(--colors-red-girl);
+label.error, label.error input {
+  background: var(--colors-red--girl);
 }
 
 label .placeholder {
@@ -92,6 +93,8 @@ input {
   border: none;
   outline: none;
   height: 24px;
+  transition: all .25s ;
+
 }
 
 input[type='number'] {

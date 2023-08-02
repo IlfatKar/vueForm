@@ -1,16 +1,19 @@
 <script lang="ts" setup>
-import {ref} from "vue";
+import {useFormControllerStore} from "@/app";
 import {Input} from '@/shared'
 
-const name = ref<string>('')
-const age = ref<number>()
+const store = useFormControllerStore()
 </script>
 <template>
   <div class="parentForm">
     <p class="title">Персональные данные</p>
     <div class="form">
-      <Input type="string" v-model="name" placeholder="Имя"/>
-      <Input type="number" v-model="age" placeholder="Возраст"/>
+      <Input type="string" v-model="store.parent.name"
+             :error="(!store.parent.name && store.showError) ?'Поле не должно быть пустым':''"
+             placeholder="Имя"/>
+      <Input type="number" v-model="store.parent.age"
+             :error="(!store.parent.age && store.showError) ?'Поле не должно быть пустым':''"
+             placeholder="Возраст"/>
     </div>
   </div>
 </template>
